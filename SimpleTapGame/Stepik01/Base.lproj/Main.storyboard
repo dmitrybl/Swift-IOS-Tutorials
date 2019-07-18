@@ -37,26 +37,14 @@
                                     <action selector="actionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNA-8Q-4Wp"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAE-25-nrw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAE-25-nrw" customClass="GameFieldView" customModule="Stepik01" customModuleProvider="target">
                                 <rect key="frame" x="20" y="143" width="374" height="552"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangle" translatesAutoresizingMaskIntoConstraints="NO" id="o8j-zH-bfl">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="42e-eP-uI1"/>
-                                            <constraint firstAttribute="width" constant="80" id="kVc-P5-juY"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="NLs-8t-Pkb" appends="YES" id="8AQ-Rk-DTh"/>
-                                        </connections>
-                                    </imageView>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="o8j-zH-bfl" firstAttribute="leading" secondItem="gAE-25-nrw" secondAttribute="leading" id="BwU-SA-3N2"/>
-                                    <constraint firstItem="o8j-zH-bfl" firstAttribute="top" secondItem="gAE-25-nrw" secondAttribute="top" id="cYm-4r-fTs"/>
-                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shapeSize">
+                                        <size key="value" width="80" height="80"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последний счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXI-5o-dJp">
                                 <rect key="frame" x="132.66666666666666" y="705" width="148.99999999999997" height="21"/>
@@ -86,10 +74,7 @@
                     <connections>
                         <outlet property="gameButton" destination="kCo-9o-QLY" id="QT2-Sb-z2X"/>
                         <outlet property="gameFieldView" destination="gAE-25-nrw" id="6OS-5J-P5L"/>
-                        <outlet property="gameObject" destination="o8j-zH-bfl" id="qVf-DX-CkA"/>
                         <outlet property="scoreLabel" destination="aXI-5o-dJp" id="9Z0-Cw-X2P"/>
-                        <outlet property="shapeX" destination="BwU-SA-3N2" id="TTK-q7-2cW"/>
-                        <outlet property="shapeY" destination="cYm-4r-fTs" id="vAi-ta-uV4"/>
                         <outlet property="stepper" destination="16y-oM-2gm" id="fd1-Ki-XPZ"/>
                         <outlet property="timeLabel" destination="K1C-4Y-jxv" id="F6q-WF-tf6"/>
                     </connections>
@@ -104,7 +89,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="116.57608695652175"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="triangle" width="200" height="200"/>
-    </resources>
 </document>
